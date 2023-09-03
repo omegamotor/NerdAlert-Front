@@ -1,0 +1,21 @@
+@function weight($weight-name){
+    @return map-get($font-weights,  $weight-name)
+};
+
+
+@mixin flexCenter(){
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+@mixin theme($light-theme: true){
+    @if $light-theme{
+        background: $light-bg;
+        color: $light-text;
+    }@else{
+        background: $dark-bg;
+        color:$dark-text;
+    }
+}
