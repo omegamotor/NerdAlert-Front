@@ -3,7 +3,6 @@
 @import './functions';
 @import './tests';
 @import './components/btns';
-@import './components/burger';
 
 
 @mixin btn{
@@ -28,7 +27,7 @@ body{
     //     background-color: #182439;
     // }
 
-    .container{
+    .containerx{
         background-color: $light-bg;
     }
     
@@ -43,7 +42,7 @@ body{
 
     .nav-panel{
         background-color: $light-bg;
-        &__item{
+        &__item, a{
             color: $light-text;
         }
     }
@@ -56,7 +55,7 @@ body{
         background-color: #182439 !important;
     }
 
-    .container{
+    .containerx{
         background-color: #182439;
     }
 
@@ -79,6 +78,13 @@ body{
 
         .btn-item{
             background: #182135;
+        }
+    }
+
+    .nav-panel{
+        background-color: $dark-bg;
+        &__item, a{
+            color: $dark-text;
         }
     }
 
@@ -106,6 +112,15 @@ body{
             &__title{
                 color: $dark-text;
             }
+        }
+    }
+
+    .article{
+        background: $dark-bg;
+        border: 1px solid $dark-seconday;
+
+        &__text{
+            color: $dark-text;
         }
     }
 }
@@ -166,6 +181,10 @@ body{
 
 #mode-select__circle {
     transition: cx 500ms, fill 500ms;
+    -webkit-transition: cx 500ms, fill 500ms;
+    -moz-transition: cx 500ms, fill 500ms;
+    -ms-transition: cx 500ms, fill 500ms;
+    -o-transition: cx 500ms, fill 500ms;
 }
 
 // Navbarbottom
@@ -205,22 +224,27 @@ body{
 // Article
 .article{
     border-radius: 20px;
-    background: var(--L---Secondary, #DCE2EF);
+    background: $light-seconday;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
+
+    width: 360px;
+    height: 292px;
+
 
     &__text {
         padding: 15px 0;
         min-height: 75px;
-        color: #000;
-        // font-family: Inter;
+        color: $light-text;
+        font-family: Inter;
         font-size: 18px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+
+        width: 335px;
+        height: 75px;
+        flex-shrink: 0;
+        margin: auto;
     }
 
     &__container{
@@ -232,6 +256,34 @@ body{
         height: 195px;
         flex-shrink: 0;
         background: url("/img/1.png"), lightgray 50% / cover no-repeat;
+    
+
+       &__tags{
+            padding-top:5px;
+            padding-right: 10px;
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 10px;
+
+            &__tag{
+                width: 50px;
+                height: 15px;
+                flex-shrink: 0;
+                border-radius: 20px;
+                background: #959595;
+
+                color:$dark-text;
+                text-align: center;
+                font-family: lato;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+           
+
+        }
+    
     }
 }
 
@@ -332,8 +384,14 @@ body{
    
 }
 
-.container{
-    padding-top: 70px;
+.containerx{
+    width: 100%;
+    display: inline-flex;
+    padding: 70px 15px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
 }
 
 
@@ -369,4 +427,45 @@ body{
         right: 0;
     }
 
+}
+
+
+
+.full-article{
+    // &__title{
+    //    color: #000;
+    //     font-family: Inter;
+    //     font-size: 18px;
+    //     font-style: normal;
+    //     font-weight: 700;
+    //     line-height: normal;
+    //     text-transform: capitalize;
+    // }
+
+    &__details{
+        display: flex;
+        justify-content: space-between;
+
+        margin-top: 10px;
+        text-align: center;
+        font-family: Lato;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+
+        &__author{color: $dark-primary;}
+        &__time{color: $dark-text;}
+    }
+
+    &__content{
+        margin-top: 10px;
+        color: $dark-text;
+        font-family: lato;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 15px; /* 125% */
+    }
+    
 }

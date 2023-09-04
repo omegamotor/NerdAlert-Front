@@ -19,3 +19,9 @@
         color:$dark-text;
     }
 }
+
+@mixin mobile {
+    @media (max-width: $mobile){
+        @content
+    }
+}
