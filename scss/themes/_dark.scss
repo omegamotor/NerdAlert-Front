@@ -1,0 +1,8 @@
+.dark{
+    // @include theme($light-theme: false);
+
+    .container{
+        background: $dark-bg-secondary;
+        color: $dark-text;
+    }
+}

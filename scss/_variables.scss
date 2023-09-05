@@ -1,19 +1,30 @@
 //--Colors-----------------------------------
 // Light
 $light-bg:#FCFCFD;
+$light-bg-secondary:#F3F4F5;
 $light-text:#0E141F;
 $light-primary:#47629A;
-$light-seconday:#DCE2EF;
+// $light-seconday:#DCE2EF;
+$light-seconday:#EFEFEF;
 $light-accent:#5071AF;
 
 // Dark
 $dark-bg:#0E141F;
+$dark-bg-secondary:#182439;
 $dark-text:#FCFCFD;
 $dark-primary:#47629A;
 $dark-seconday:#101623;
 $dark-accent:#B9C6DF;
 
 //-------------------------------------------
+
+// Fonts
+$f-big: 24px;
+$f-medium: 18px;
+$f-small: 12px;
+
+//Var
+$radius: 10px;
 
 
 $mobile:800px;

@@ -1,0 +1,7 @@
+.light{
+    // @include theme();
+    .container{
+        background-color: $light-bg;
+        color: $light-text;
+    }
+}

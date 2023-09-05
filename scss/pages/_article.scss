@@ -1,0 +1,50 @@
+.full-article{
+    font-family: Lato;
+    &__title{
+        font-family: Lato;
+        font-size: 18px;
+        text-transform: capitalize;
+        margin-bottom: 10px;
+    }
+
+    &__details{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        text-align: center;
+        font-family: Lato;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    &__content{
+        margin-top: 10px;
+        font-family: lato;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 15px; /* 125% */
+    }
+}
+
+// Dark theme
+.dark{
+    .full-article{
+        &__details{
+            color: $dark-text;
+            &__author{color: $dark-primary;}
+        }
+    }
+}
+
+// Light theme
+.light{
+    .full-article{
+        &__details{
+            color: $light-text;
+            &__author{color: $light-primary;}
+        }
+    }
+}
