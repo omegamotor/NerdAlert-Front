@@ -375,18 +375,17 @@ a {
   color: #47629A;
 }
 
-.comment-create {
+.comment-create, .comment-box {
   background: #182439;
   width: 100%;
   font-family: lato;
   border-radius: 10px;
-  height: 212px;
   flex-shrink: 0;
   border-radius: 10px;
   background: #F3F4F5;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
-.comment-create h3 {
+.comment-create h3, .comment-box h3 {
   margin-top: 12px;
   margin-bottom: 17px;
   margin-left: 16px;
@@ -395,7 +394,7 @@ a {
   font-size: 18px;
   font-weight: 400;
 }
-.comment-create textarea {
+.comment-create textarea, .comment-box textarea {
   margin: 0 10px;
   width: 340px;
   height: 95px;
@@ -403,6 +402,34 @@ a {
   border-radius: 10px;
   background: #FCFCFD;
   padding: 0.2rem 1rem;
+}
+.comment-create__read-comments, .comment-box__read-comments {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 10px;
+}
+.comment-create__read-comments__comment, .comment-box__read-comments__comment {
+  width: 340px;
+  flex-shrink: 0;
+  margin: auto;
+  border-radius: 10px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%), #F3F4F5;
+}
+.comment-create__read-comments__comment__top, .comment-box__read-comments__comment__top {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 12px;
+}
+.comment-create__read-comments__comment__mid, .comment-box__read-comments__comment__mid {
+  padding: 10px;
+}
+.comment-create__read-comments__comment__bottom, .comment-box__read-comments__comment__bottom {
+  padding: 10px;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .btn {
@@ -412,45 +439,91 @@ a {
   display: block;
   border-radius: 10px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0);
   text-align: center;
-  font-family: Inter;
+  font-family: lato;
   font-size: 18px;
   font-weight: 400;
   margin: 10px auto 10px auto;
-  border: none;
 }
 .btn:hover {
   cursor: pointer;
 }
 
-.dark .comment-create {
+.btn-big {
+  width: 260px;
+}
+
+.dark .comment-create, .dark .comment-box {
   color: #FCFCFD;
   background-color: #182439;
   border: 1px solid #47629A;
 }
-.dark .comment-create h3 {
+.dark .comment-create h3, .dark .comment-box h3 {
   color: #FCFCFD;
 }
-.dark .comment-create .btn {
+.dark .comment-create .btn, .dark .comment-box .btn {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%), #182439;
   color: #FCFCFD;
   border: 1px solid #47629A;
 }
-.dark .comment-create .btn:hover {
+.dark .comment-create .btn:hover, .dark .comment-box .btn:hover {
   background: #47629A;
   background-blend-mode: darken;
 }
+.dark .comment-create__read-comments__comment, .dark .comment-box__read-comments__comment {
+  background-color: #101623;
+  color: #FCFCFD;
+}
 
-.light .comment-create {
+.light .comment-create, .light .comment-box {
   color: #0E141F;
 }
-.light .comment-create .btn {
+.light .comment-create .btn, .light .comment-box .btn {
   background: #47629A;
   color: #FCFCFD;
 }
-.light .comment-create .btn:hover {
+.light .comment-create .btn:hover, .light .comment-box .btn:hover {
   background: #EFEFEF;
   background-blend-mode: darken;
+}
+.light .comment-create__read-comments__comment, .light .comment-box__read-comments__comment {
+  background-color: #EFEFEF;
+  color: #0E141F;
+}
+
+.dark .comment-box__read-comments__comment__top__time {
+  color: #FCFCFD;
+}
+.dark .comment-box__read-comments__comment__top__author {
+  color: #47629A;
+}
+
+.light .comment-box__read-comments__comment__top__time {
+  color: #0E141F;
+}
+.light .comment-box__read-comments__comment__top__author {
+  color: #47629A;
+}
+
+.form {
+  padding: 23px;
+  width: 330px;
+  margin: auto;
+  height: 291px;
+  border-radius: 10px;
+  background: #EFEFEF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.form .logo {
+  width: 100% !important;
+  height: 32px;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  font-size: 32px;
+}
+.form .logo .span:nth-of-type(2) {
+  font-size: 32px;
 }
 
 .dark .container {

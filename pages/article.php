@@ -50,7 +50,7 @@
 
 <!-- Coments -->
 
-<div class="comment-create">
+<div class="comment-box comment-create">
     <h3>Dodaj komentarz</h3>
 
     <textarea name="" id="" cols="30" rows="10"></textarea>
@@ -58,4 +58,38 @@
         <button class="btn">Dodaj</button>
     <!-- </div> -->
    
+</div>
+
+
+<div class="comment-box comments-read">
+    <h3>Komentarze: 15</h3>
+    <button class="btn btn-big">Wczytaj komentarze</button>
+</div>
+
+<div class="comment-box comments-readed">
+    <h3>Komentarze: 15</h3>
+    
+
+    <div class="comment-box__read-comments">
+        
+        <?php for ($i=0; $i < 10; $i++) { ?>
+            <div class="comment-box__read-comments__comment">
+                <div class="comment-box__read-comments__comment__top">
+                    <span class="comment-box__read-comments__comment__top__author">PiotrGie</span>
+                    <span class="comment-box__read-comments__comment__top__time">Wczoraj, 8:36</span>
+                </div>
+
+                <div class="comment-box__read-comments__comment__mid">
+                    <p>Zajebista gra ale mogła by jepiej wyglądać!</p>
+                </div>
+
+                <div class="comment-box__read-comments__comment__bottom">
+                    <div class="add-comment-answer">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+
 </div>

@@ -21,8 +21,11 @@
     
     <!-- Select Page -->
     <div class="container">
-        <?php @include('./pages/news.php') ?>
-        <?php @include('./pages/article.php') ?>
+        <?php 
+            // @include('./pages/news.php');
+            @include('./pages/article.php');
+            // @include('./pages/login.php');
+        ?>
     </div>
 
     <!-- Bottom Nav -->

@@ -1,0 +1,38 @@
+@import '../variables';
+
+.form{
+
+    padding: 23px;
+    .logo{
+        width: 100% !important;
+        height: 32px;
+        text-align: center;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.50);
+        font-size: 32px;
+
+        .span:nth-of-type(2){
+            font-size: 32px;
+        }
+    }
+
+    width: 330px;
+    margin: auto;
+    height: 291px;
+
+    border-radius: $radius;
+    background: $light-seconday;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+
+
+// Dark theme
+.dark{
+  
+    
+}
+
+// Light theme
+.light{
+  
+}

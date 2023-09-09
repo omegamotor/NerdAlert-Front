@@ -54,18 +54,19 @@
 
 
 
-.comment-create{
+.comment-create, .comment-box{
     background: $dark-bg-secondary;
     width: 100%;
     font-family: lato;
     // border: 1px solid $dark-seconday;
     border-radius:$radius;
     //width: 360px;
-    height: 212px;
+    // height: 212px;
     flex-shrink: 0;
     border-radius: $radius;
     background: $light-bg-secondary;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
     h3{
         margin-top: 12px;
         margin-bottom: 17px;
@@ -87,6 +88,46 @@
 
         padding: .2rem 1rem;
     }
+
+
+    &__read-comments{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        padding: 10px;
+
+        &__comment{
+            width: 340px;
+            // height: 84px;   
+            flex-shrink: 0;
+            margin: auto;
+
+            // border: 1px solid black;
+
+            border-radius: $radius;
+            // background-color: $dark-seconday;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%), #F3F4F5;
+
+            &__top{
+                display: flex;
+                justify-content: space-between;
+                padding: 10px;
+                font-weight: bold;
+                font-size: 12px;
+            }
+
+            &__mid{
+                padding: 10px;
+            }
+            
+            &__bottom{
+                padding: 10px;
+                display: flex;
+                flex-direction: row-reverse;
+            }
+        }
+    }
 }
 
 .btn{
@@ -96,30 +137,35 @@
     display: block;
     border-radius:$radius;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.50);
+    border: 1px solid rgba(0, 0, 0, 0);
     
     text-align: center;
-    font-family: Inter;
+    font-family: lato;
     font-size: 18px;
     font-weight: 400;
     margin: 10px auto 10px auto;
 
-    border: none;
+    // border: none;
 
     &:hover{
         cursor:pointer;
     }
 }
 
+.btn-big{
+    width: 260px;
+
+}
+
 // Dark theme
 .dark{
-    .comment-create{
+    .comment-create, .comment-box{
        color: $dark-text;
        background-color: $dark-bg-secondary;
        border: 1px solid $dark-primary;
 
-       h3{
-        color: $dark-text;
-       }
+       h3{color: $dark-text;}
+
        .btn{
             background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%), $dark-bg-secondary;
             color: $dark-text;
@@ -130,12 +176,21 @@
                 background-blend-mode: darken;
             }
         }
+
+
+        &__read-comments{
+            &__comment{
+                background-color: $dark-seconday;
+                color: $dark-text;
+               
+            }
+        }
     }
 }
 
 // Light theme
 .light{
-    .comment-create{
+    .comment-create, .comment-box{
         color: $light-text;
 
         .btn{
@@ -148,5 +203,30 @@
                 background-blend-mode: darken;
             }
         }
+
+        &__read-comments{
+            &__comment{
+                background-color: $light-seconday;
+                color: $light-text;
+               
+            }
+        }
+    }
+}
+
+// Dark theme
+.dark{
+    .comment-box__read-comments__comment__top{
+        &__time{color: $dark-text;}
+        &__author{color: $dark-primary;}
+    }
+    
+}
+
+// Light theme
+.light{
+    .comment-box__read-comments__comment__top{
+        &__time{color: $light-text;}
+        &__author{color: $light-primary;}
     }
 }
