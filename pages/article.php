@@ -46,3 +46,16 @@
         nec. Aliquam ultrices quam id enim euismod gravida.
     </div>
 </div>  
+
+
+<!-- Coments -->
+
+<div class="comment-create">
+    <h3>Dodaj komentarz</h3>
+
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <!-- <div class=""> -->
+        <button class="btn">Dodaj</button>
+    <!-- </div> -->
+   
+</div>

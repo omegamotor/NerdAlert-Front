@@ -1,3 +1,6 @@
+// Zmienne
+@import '../variables';
+
 .full-article{
     font-family: Lato;
     &__title{
@@ -45,6 +48,105 @@
         &__details{
             color: $light-text;
             &__author{color: $light-primary;}
+        }
+    }
+}
+
+
+
+.comment-create{
+    background: $dark-bg-secondary;
+    width: 100%;
+    font-family: lato;
+    // border: 1px solid $dark-seconday;
+    border-radius:$radius;
+    //width: 360px;
+    height: 212px;
+    flex-shrink: 0;
+    border-radius: $radius;
+    background: $light-bg-secondary;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    h3{
+        margin-top: 12px;
+        margin-bottom: 17px;
+        margin-left: 16px;
+
+        color: #000;
+        font-family: Lato;
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    textarea{
+        margin: 0 10px;
+        width: 340px;
+        height: 95px;
+        flex-shrink: 0;
+        border-radius: $radius;
+        background:$light-bg;
+
+        padding: .2rem 1rem;
+    }
+}
+
+.btn{
+    min-width: 156px;
+    height: 45px;
+    flex-shrink: 0;
+    display: block;
+    border-radius:$radius;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.50);
+    
+    text-align: center;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 10px auto 10px auto;
+
+    border: none;
+
+    &:hover{
+        cursor:pointer;
+    }
+}
+
+// Dark theme
+.dark{
+    .comment-create{
+       color: $dark-text;
+       background-color: $dark-bg-secondary;
+       border: 1px solid $dark-primary;
+
+       h3{
+        color: $dark-text;
+       }
+       .btn{
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%), $dark-bg-secondary;
+            color: $dark-text;
+            border: 1px solid $dark-primary;
+
+            &:hover{
+                background: $light-primary;
+                background-blend-mode: darken;
+            }
+        }
+    }
+}
+
+// Light theme
+.light{
+    .comment-create{
+        color: $light-text;
+
+        .btn{
+            background: $light-primary;
+            color: $dark-text;
+
+            &:hover{
+                
+                background: $light-seconday;
+                background-blend-mode: darken;
+            }
         }
     }
 }

@@ -1,14 +1,13 @@
-@import './resets';
-@import './variables';
-@import './functions';
-@import './components/btns';
-@import './components/logo';
-@import './components/nav-top';
-@import './components/nav-bottom';
-@import './components/small-article-news-page';
-@import './pages/article';
-@import './themes/dark';
-@import './themes/light';
+@use './resets';
+@use './components/btns';
+@use './components/logo';
+@use './components/nav-top';
+@use './components/nav-bottom';
+@use './components/small-article-news-page';
+@use './pages/article';
+@use './themes/dark';
+@use './themes/light';
+
 
 @mixin btn{
     display: block;

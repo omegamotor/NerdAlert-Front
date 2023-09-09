@@ -375,6 +375,84 @@ a {
   color: #47629A;
 }
 
+.comment-create {
+  background: #182439;
+  width: 100%;
+  font-family: lato;
+  border-radius: 10px;
+  height: 212px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #F3F4F5;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.comment-create h3 {
+  margin-top: 12px;
+  margin-bottom: 17px;
+  margin-left: 16px;
+  color: #000;
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: 400;
+}
+.comment-create textarea {
+  margin: 0 10px;
+  width: 340px;
+  height: 95px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #FCFCFD;
+  padding: 0.2rem 1rem;
+}
+
+.btn {
+  min-width: 156px;
+  height: 45px;
+  flex-shrink: 0;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 10px auto 10px auto;
+  border: none;
+}
+.btn:hover {
+  cursor: pointer;
+}
+
+.dark .comment-create {
+  color: #FCFCFD;
+  background-color: #182439;
+  border: 1px solid #47629A;
+}
+.dark .comment-create h3 {
+  color: #FCFCFD;
+}
+.dark .comment-create .btn {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%), #182439;
+  color: #FCFCFD;
+  border: 1px solid #47629A;
+}
+.dark .comment-create .btn:hover {
+  background: #47629A;
+  background-blend-mode: darken;
+}
+
+.light .comment-create {
+  color: #0E141F;
+}
+.light .comment-create .btn {
+  background: #47629A;
+  color: #FCFCFD;
+}
+.light .comment-create .btn:hover {
+  background: #EFEFEF;
+  background-blend-mode: darken;
+}
+
 .dark .container {
   background: #182439;
   color: #FCFCFD;
