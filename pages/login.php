@@ -20,7 +20,6 @@
         <div class="mb-3">
             <input type="checkbox" />
             <label for="">Zapamiętaj mnie</label>
-            
         </div>
 
         <div class="btn">Zaloguj</div>

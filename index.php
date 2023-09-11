@@ -23,8 +23,8 @@
     <div class="container">
         <?php 
             // @include('./pages/news.php');
-            @include('./pages/article.php');
-            // @include('./pages/login.php');
+            // @include('./pages/article.php');
+            @include('./pages/login.php');
         ?>
     </div>
 

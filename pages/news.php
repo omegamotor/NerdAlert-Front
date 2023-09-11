@@ -1,5 +1,7 @@
 
-<?php for ($i=0; $i < 10; $i++) { ?>
+<?php 
+for ($i=0; $i < 10; $i++) { 
+?>
     <a href="#" class="article">
         <div class="article__img">
             <div class="article__img__tags">
@@ -13,4 +15,6 @@
             Starfield. Todd Howard i Bethesda dziękują fanom: stworzyliśmy coś, co wydawało się niewykonalne.
         </div>
     </a> 
-<?php } ?>
+<?php 
+} 
+?>
