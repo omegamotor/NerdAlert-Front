@@ -138,14 +138,13 @@
     border-radius:$radius;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.50);
     border: 1px solid rgba(0, 0, 0, 0);
+    line-height: 45px;
     
     text-align: center;
     font-family: lato;
     font-size: 18px;
     font-weight: 400;
     margin: 10px auto 10px auto;
-
-    // border: none;
 
     &:hover{
         cursor:pointer;
@@ -154,29 +153,31 @@
 
 .btn-big{
     width: 260px;
+}
 
+.btn-sm{
+    width: 156px;
 }
 
 // Dark theme
 .dark{
+    .btn{
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%), $dark-bg-secondary;
+        color: $dark-text;
+        border: 1px solid $dark-primary;
+
+        &:hover{
+            background: $light-primary;
+            background-blend-mode: darken;
+        }
+    }
+
     .comment-create, .comment-box{
        color: $dark-text;
        background-color: $dark-bg-secondary;
        border: 1px solid $dark-primary;
 
        h3{color: $dark-text;}
-
-       .btn{
-            background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%), $dark-bg-secondary;
-            color: $dark-text;
-            border: 1px solid $dark-primary;
-
-            &:hover{
-                background: $light-primary;
-                background-blend-mode: darken;
-            }
-        }
-
 
         &__read-comments{
             &__comment{
@@ -190,19 +191,20 @@
 
 // Light theme
 .light{
+    .btn{
+        background: $light-primary;
+        color: $dark-text;
+
+        &:hover{
+            
+            background: $light-seconday;
+            background-blend-mode: darken;
+        }
+    }
     .comment-create, .comment-box{
         color: $light-text;
 
-        .btn{
-            background: $light-primary;
-            color: $dark-text;
-
-            &:hover{
-                
-                background: $light-seconday;
-                background-blend-mode: darken;
-            }
-        }
+      
 
         &__read-comments{
             &__comment{

@@ -1,0 +1,124 @@
+@import '../variables';
+
+
+
+.page-title{
+    padding: 10px;
+    width: 100vw;
+    font-family: lato;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__text{
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
+
+.games{
+    margin:0 15px;
+    padding: 15px 0;
+
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.game{
+    border-radius: $radius;
+    text-align: center;
+
+    &__img{
+        width: 100%;
+        border-radius: $radius $radius 0 0;
+    }
+
+
+    position: relative;
+
+    .tags{
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        width: 100%;
+        gap: 6px;
+        margin: 10px 5px;
+
+        .tag{
+            min-width: min-content;
+            padding: 0 15px;
+            height: 20px;
+            background-color: red;
+            border-radius: 20px;
+
+            color: white;
+            text-align: center;
+            font-family: lato;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+        }
+
+        .tag-x{
+            background-color: #107C10;
+        }
+        .tag-ps{
+            background-color: #006FCD;
+        }
+    }
+
+    .title{
+        // color: #000;
+        text-align: center;
+        font-family: lato;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        padding-bottom: 10px;
+    }
+}
+
+
+
+// Dark theme
+.dark{
+    .page-title{
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), #182439;
+        color: $dark-text;
+    }
+
+    .game{
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), #182439;;
+        color: $dark-text;
+
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+    
+}
+
+// Light theme
+.light{
+    .page-title{
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%), #F3F4F5;
+        color: $light-text;
+        .title{
+
+            color: $light-text;
+        }
+    }
+
+    .game{
+        background-color: $light-bg-secondary;
+        color: $light-text;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        .title{
+            color: $light-text;
+            
+        }
+    }
+}

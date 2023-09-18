@@ -1,8 +1,8 @@
 @import '../variables';
 
 .form{
-
     padding: 23px;
+
     .logo{
         width: 100% !important;
         height: 32px;
@@ -17,22 +17,105 @@
 
     width: 330px;
     margin: auto;
-    height: 291px;
 
     border-radius: $radius;
     background: $light-seconday;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+    form{
+        margin-top:40px;
+    }
+
+    label{
+        display: block;
+
+        color: #000;
+        font-family: lato;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        margin: 0 0 5px 14px;
+    }
+
+    .input-form{
+        margin-bottom: 30px;
+
+        input[type=text], input[type=email], input[type=password]{
+            width: 100%;
+            height: 55px;
+            flex-shrink: 0;
+    
+            border-radius: 20px;
+            background: var(--L---Background, #FCFCFD);
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+            border: none;
+
+            padding: 0 25px;
+            font-size: 16px;
+        }
+
+        input[type=checkbox]{
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+
+            border-radius: 20px;
+            background: var(--L---Background, #FCFCFD);
+        }
+    }
+
+    .input-checkbox{
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+        align-items: center;
+    }
+
+ 
+
+    .btn-forget{
+        color: var(--L---Primary, #47629A);
+        text-align: center;
+        font-family: lato;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-decoration-line: underline;
+
+        margin-bottom: 30px;
+    }
+   
+
 }
 
 
 
 // Dark theme
 .dark{
-  
+    .form{
+        border: 1px solid $dark-primary;
+        background: $dark-bg;
+        color: $dark-text;
+
+        label{
+            color: $dark-text;
+        }
+    }
     
 }
 
 // Light theme
 .light{
-  
+    .form{
+        border: 1px solid rgba(0, 0, 0, 0);
+        background: $light-seconday;
+        color: $light-text;
+
+       
+
+    }
 }
