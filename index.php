@@ -24,7 +24,12 @@
         <?php 
             // @include('./pages/news.php');
             // @include('./pages/article.php');
-            @include('./pages/login.php');
+
+            // @include('./pages/login.php');
+            // @include('./pages/forget-password.php');
+            // @include('./pages/register.php');
+            @include('./pages/encyclopedia.php');
+            // @include('./components/loading.php');
         ?>
     </div>
 

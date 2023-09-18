@@ -1,11 +1,14 @@
 @use './resets';
+@use './general';
 @use './components/btns';
 @use './components/logo';
 @use './components/nav-top';
 @use './components/nav-bottom';
+@use './components/loading';
 @use './components/small-article-news-page';
 @use './pages/article';
 @use './pages/login';
+@use './pages/encyclopedia';
 @use './themes/dark';
 @use './themes/light';
 
@@ -24,7 +27,8 @@ $font-weights: (
 
 .container{
     width: 100vw;
-    min-height: calc(100vh - 99px);
+    // min-height: calc(100vh - 100px);
+    min-height: 100vh;
     display: inline-flex;
     padding: 70px 15px;
     flex-direction: column;

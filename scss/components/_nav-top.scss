@@ -208,6 +208,7 @@
     transition-duration: 500ms;
     border-radius: $radius;
     opacity: 0.9;
+    z-index: 3;
     
     &__item{
         text-align: center;
